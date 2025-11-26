@@ -1,6 +1,23 @@
+"use client";
+
 import Link from "next/link";
+import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 export function HeroSection({ stats }) {
+  const [email, setEmail] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const router = useRouter();
+
+  const handleSubscribe = async (e) => {
+    e.preventDefault();
+    if (!email || isSubmitting) return;
+    
+    setIsSubmitting(true);
+    // Simulate API call delay
+    await new Promise((resolve) => setTimeout(resolve, 500));
+    router.push(`/subscribe?email=${encodeURIComponent(email)}`);
+  };
   return (
     <section
       className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#0F1523] via-[#0A0E19] to-[#0A0E19] px-8 py-16 shadow-2xl sm:px-12"
@@ -86,6 +103,33 @@ export function HeroSection({ stats }) {
               leveraged products involves significant risk and is not suitable
               for everyone.
             </p>
+            
+            {/* Email Subscribe Form */}
+            <div className="subscribe-bounce mt-8 rounded-2xl border border-[#34D399]/20 bg-gradient-to-br from-[#0F1523]/80 to-[#0A0E19]/80 p-6 backdrop-blur-sm shadow-[0_0_30px_rgba(52,211,153,0.2)]">
+              <h3 className="mb-3 text-lg font-semibold text-white">
+                Stay updated with trading insights
+              </h3>
+              <p className="mb-4 text-sm text-[#A0A8B0]">
+                Get the latest updates, market analysis, and exclusive offers delivered to your inbox.
+              </p>
+              <form onSubmit={handleSubscribe} className="flex flex-col gap-3 sm:flex-row">
+                <input
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="Enter your email"
+                  required
+                  className="flex-1 rounded-lg border border-[#1C2335] bg-[#0F1523]/50 px-4 py-3 text-white placeholder:text-[#88909C] focus:border-[#34D399] focus:outline-none focus:ring-2 focus:ring-[#34D399]/20"
+                />
+                <button
+                  type="submit"
+                  disabled={isSubmitting}
+                  className="inline-flex items-center justify-center rounded-lg bg-[#34D399] px-6 py-3 text-sm font-semibold text-[#0A0E19] transition hover:bg-[#3FE0A7] disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                  {isSubmitting ? "Subscribing..." : "Subscribe"}
+                </button>
+              </form>
+            </div>
           </div>
           <div className="mt-10 grid flex-1 gap-6 rounded-2xl border border-[#1C2335]/70 bg-[#0F1523]/80 p-8 shadow-[0_35px_120px_rgba(52,211,153,0.18)] ring-1 ring-[#34D399]/10 backdrop-blur-xl sm:grid-cols-2">
             {stats.map((item) => (
@@ -130,6 +174,17 @@ export function HeroSection({ stats }) {
           }
           100% {
             transform: translateX(-25%);
+          }
+        }
+        .subscribe-bounce {
+          animation: gentleBounce 3s ease-in-out infinite;
+        }
+        @keyframes gentleBounce {
+          0%, 100% {
+            transform: translateY(0);
+          }
+          50% {
+            transform: translateY(-8px);
           }
         }
       `}</style>

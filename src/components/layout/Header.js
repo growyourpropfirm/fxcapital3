@@ -17,7 +17,7 @@ export function Header() {
 
   return (
     <header
-      className="sticky top-0 z-50 border-b border-[#1C2335] bg-[#05070F]/80 backdrop-blur"
+      className="fixed top-0 left-0 right-0 z-50 border-b border-[#1C2335]/30 bg-[#05070F]/40 backdrop-blur-md"
       data-aos="fade-down"
     >
       <div className="mx-auto flex max-w-[1280px] items-center justify-between px-6 py-4 sm:px-10 lg:px-12">
@@ -26,7 +26,7 @@ export function Header() {
           className="flex items-center gap-3 text-white"
           aria-label="FXCapital3 Home"
         >
-          <Image src={"./logo.svg"} width={130} height={28} />
+        <Image src={"./logo.svg"} width={150} height={30} />
         </Link>
 
         {/* <nav className="hidden items-center gap-6 text-sm font-medium text-[#A0A8B0] md:flex">
@@ -41,27 +41,35 @@ export function Header() {
           ))}
         </nav> */}
 
-        {/* <div className="hidden gap-3 md:flex">
+        <div className="hidden gap-3 md:flex">
           <Link
-            href="#funding"
-            className="inline-flex items-center justify-center rounded-lg border border-[#34D399] px-4 py-2 text-sm font-semibold text-[#34D399] transition hover:bg-[#34D3991A]"
+            href="/login"
+            className="inline-flex items-center justify-center rounded-lg border border-[#34D399] px-5 py-2.5 text-sm font-semibold text-[#34D399] transition hover:bg-[#34D3991A]"
           >
-            View programs
+            Login
           </Link>
           <Link
-            href="#"
-            className="inline-flex items-center justify-center rounded-lg bg-[#34D399] px-4 py-2 text-sm font-semibold text-[#0A0E19] transition hover:bg-[#3FE0A7]"
+            href="/signup"
+            className="inline-flex items-center justify-center rounded-lg bg-[#34D399] px-5 py-2.5 text-sm font-semibold text-[#0A0E19] transition hover:bg-[#3FE0A7]"
           >
-            Trade now
+            Sign Up
           </Link>
-        </div> */}
+        </div>
 
-        <Link
-          href="#"
-          className="inline-flex items-center justify-center rounded-lg bg-[#34D399] px-4 py-2 text-sm font-semibold text-[#0A0E19] transition hover:bg-[#3FE0A7] md:hidden"
-        >
-          Trade now
-        </Link>
+        <div className="flex gap-2 md:hidden">
+          <Link
+            href="/login"
+            className="inline-flex items-center justify-center rounded-lg border border-[#34D399] px-4 py-2 text-xs font-semibold text-[#34D399] transition hover:bg-[#34D3991A]"
+          >
+            Login
+          </Link>
+          <Link
+            href="/signup"
+            className="inline-flex items-center justify-center rounded-lg bg-[#34D399] px-4 py-2 text-xs font-semibold text-[#0A0E19] transition hover:bg-[#3FE0A7]"
+          >
+            Sign Up
+          </Link>
+        </div>
       </div>
     </header>
   );

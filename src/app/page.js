@@ -235,9 +235,9 @@ export default function Home() {
       <BackgroundFX />
       <div className="relative z-10">
         <Header />
-        <main className="mx-auto flex min-h-screen max-w-[1280px] flex-col gap-24 px-6 py-16 sm:px-10 lg:px-12">
+        <main className="mx-auto flex min-h-screen max-w-[1280px] flex-col gap-24 px-6 pt-24 pb-16 sm:px-10 lg:px-12">
           <HeroSection stats={stats} />
-          <CredibilitySection />
+          {/* <CredibilitySection /> */}
           <FundingSection
             accountSummary="Select from simulated account sizes ranging from $10,000 to $400,000 with standard 1:100 leverage. Start smaller if needed—our scaling plans let you grow the allocation up to $400,000, subject to rules and performance criteria."
             programs={programs}
@@ -249,7 +249,7 @@ export default function Home() {
             calculator="Enter account size, risk %, and stop distance to get a suggested lot size that keeps risk consistent."
             roadmap={aiRoadmap}
           />
-          <FitSection fit={fit} notFit={notFit} />
+          {/* <FitSection fit={fit} notFit={notFit} /> */}
           <FAQSection faqs={faq} />
           <FinalCTASection />
           <RiskFooter />

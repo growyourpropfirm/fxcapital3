@@ -3,9 +3,15 @@ import Link from "next/link";
 export function FinalCTASection() {
   return (
     <section
-      className="fx-card rounded-3xl border border-[#1C2335] bg-gradient-to-r from-[#0F1523] to-[#0A0E19] px-8 py-12 text-center"
+      className="relative overflow-hidden rounded-3xl border border-[#34D399]/20 bg-gradient-to-br from-[#0F1523] via-[#0A0E19] to-[#0A0E19] px-8 py-16 text-center shadow-[0_40px_120px_rgba(52,211,153,0.15)]"
       data-aos="fade-up"
     >
+      {/* Background glow effect */}
+      <div className="pointer-events-none absolute inset-0">
+        <div className="absolute left-1/2 top-1/2 h-96 w-96 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#34D399]/10 blur-[120px]" />
+      </div>
+      
+      <div className="relative z-10">
       <h2 className="text-3xl font-semibold text-white">
         Your edge deserves a structured environment
       </h2>
@@ -33,6 +39,7 @@ export function FinalCTASection() {
         Apply only if you understand how the program works and accept the risks
         involved.
       </p>
+      </div>
     </section>
   );
 }
