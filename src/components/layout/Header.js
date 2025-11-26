@@ -26,7 +26,7 @@ export function Header() {
           className="flex items-center gap-3 text-white"
           aria-label="FXCapital3 Home"
         >
-        <Image src={"./logo.svg"} width={150} height={30} />
+        <Image src={"./logo.svg"} width={150} height={30} alt="fxcapital3-logo" />
         </Link>
 
         {/* <nav className="hidden items-center gap-6 text-sm font-medium text-[#A0A8B0] md:flex">
