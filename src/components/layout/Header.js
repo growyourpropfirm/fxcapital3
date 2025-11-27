@@ -23,7 +23,7 @@ export function Header() {
       <div className="mx-auto flex max-w-[1280px] items-center justify-between px-6 py-4 sm:px-10 lg:px-12">
         <Link
           href="/"
-          className="flex items-center gap-3 text-white"
+          className="flex items-center gap-3 text-white -ml-10"
           aria-label="FXCapital3 Home"
         >
         <Image src={"./logo.svg"} width={150} height={30} alt="fxcapital3-logo" />

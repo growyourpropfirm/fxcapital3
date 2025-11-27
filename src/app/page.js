@@ -234,7 +234,7 @@ export default function Home() {
       <BackgroundFX />
       <div className="relative z-10">
         <Header />
-        <main className="mx-auto flex min-h-screen max-w-[1400px] flex-col gap-24 px-6 pt-24 pb-16 sm:px-10 lg:px-12">
+        <main className="mx-auto flex min-h-screen max-w-[1370px] flex-col gap-24 px-6 pt-24 pb-16 sm:px-10 lg:px-12">
           <HeroSection stats={stats} />
           {/* <CredibilitySection /> */}
           {/* <FundingSection
