@@ -16,6 +16,9 @@ import { FitSection } from "@/components/sections/FitSection";
 import { FAQSection } from "@/components/sections/FAQSection";
 import { FinalCTASection } from "@/components/sections/FinalCTASection";
 import { RiskFooter } from "@/components/sections/RiskFooter";
+import { MistakeSection } from "@/components/sections/MistakeSection";
+import { TrustedSection } from "@/components/sections/TrustedSection";
+import { NextStepsSection } from "@/components/sections/NextStepsSection";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -32,53 +35,48 @@ const stats = [
 
 const howItWorks = [
   {
-    title: "Step 1 – Pick your program",
+    title: "Register for Free Access",
     body:
-      "Choose the 1-Step or 2-Step Challenge and the simulated account size that fits your style. Review all rules, targets, and risk limits before you start.",
+      "Sign up with your email to receive your trial account credentials and evaluation rules instantly.",
   },
   {
-    title: "Step 2 – Trade the evaluation",
+    title: "Trade Under Simulated Conditions",
     body:
-      "Operate in real-time market conditions. Stay within the daily and overall drawdown limits, reach the profit target, and follow every program rule—without minimum trading days or time pressure.",
+      "Use simulated capital with live market data to trade your own strategy while following FXCapital’s risk limits and guidelines.",
   },
   {
-    title: "Step 3 – Move to a funded stage",
+    title: "Qualify for a Funding Challenge",
     body:
-      "Pass the evaluation to unlock an 80% profit split under the same disciplined risk framework. The funded experience may involve a live account provided by a partner.",
-  },
-  {
-    title: "Step 4 – Trade, track, withdraw",
-    body:
-      "Trade your own playbook, use FXCapital3 tools for discipline, and request payouts on the schedule defined in your agreement.",
+      "Show discipline and consistency in the trial to earn an invite to a 1-Step or 2-Step funding challenge with larger simulated capital.",
   },
 ];
 
 const benefits = [
   {
-    title: "Simulated capital, real discipline",
+    title: "No deposit into a trading account",
     body:
-      "Trade simulated funding instead of risking your personal account with us while still operating under live-market conditions and structured limits.",
+      "Trade simulated funds only—your personal trading capital stays untouched.",
   },
   {
-    title: "Risk-first framework",
+    title: "Fast, structured feedback",
     body:
-      "Daily and overall drawdowns, defined targets, and prohibited-strategy lists encourage sustainable trading—not short-term gambling.",
+      "See how your strategy performs under clear drawdown rules and evaluation targets.",
   },
   {
-    title: "Tools that support your process",
+    title: "Transparent evaluation rules",
     body:
-      "From position sizing to scenario planning, our tools keep your own rules front-and-center. You remain fully accountable for every decision.",
+      "All conditions are defined before you start – no hidden tricks, no surprise restrictions.",
   },
   {
-    title: "Modern infrastructure",
+    title: "No hidden conditions",
     body:
-      "Trade on current platforms with strong connectivity and the analytics you need to review performance objectively.",
+      "Clean, rules-based framework. What you see in the trial is what you can expect in the full evaluation",
   },
-  {
-    title: "Transparent, realistic messaging",
-    body:
-      "We don’t promise easy profits or guarantees—we provide structure, capital access, and tools. Results depend on you and the market.",
-  },
+  // {
+  //   title: "Transparent, realistic messaging",
+  //   body:
+  //     "We don’t promise easy profits or guarantees—we provide structure, capital access, and tools. Results depend on you and the market.",
+  // },
 ];
 
 const faq = [
@@ -169,16 +167,16 @@ const programs = [
   },
 ];
 
-const fit = [
-  "Traders with existing forex or indices strategies",
-  "Professionals who understand leverage and margin",
-  "Operators seeking structure, capital access, and tools",
-];
+// const fit = [
+//   "Traders with existing forex or indices strategies",
+//   "Professionals who understand leverage and margin",
+//   "Operators seeking structure, capital access, and tools",
+// ];
 
 const notFit = [
-  "People seeking investment advice or signals",
-  "Traders unwilling to follow detailed rules",
-  "Absolute beginners with no trading experience",
+  "You’ve been trading demo or small real accounts and want to see if your approach is ready for a funding evaluation.",
+  "You want to experience a professional, rule-based evaluation process before paying for a full challenge.",
+  "You prefer to start in a risk-controlled, simulated environment while you build trust in both your strategy and the FXCapital framework.",
 ];
 
 const aiPreview = [
@@ -238,21 +236,25 @@ export default function Home() {
         <main className="mx-auto flex min-h-screen max-w-[1280px] flex-col gap-24 px-6 pt-24 pb-16 sm:px-10 lg:px-12">
           <HeroSection stats={stats} />
           {/* <CredibilitySection /> */}
-          <FundingSection
+          {/* <FundingSection
             accountSummary="Select from simulated account sizes ranging from $10,000 to $400,000 with standard 1:100 leverage. Start smaller if needed—our scaling plans let you grow the allocation up to $400,000, subject to rules and performance criteria."
             programs={programs}
-          />
+          /> */}
           <HowItWorksSection steps={howItWorks} />
+          <MistakeSection />
+          <TrustedSection />
           <WhySection benefits={benefits} />
-          <AiToolsSection
+          <FitSection bullets={notFit} />
+          <NextStepsSection />
+          <FinalCTASection />
+          <RiskFooter />
+
+          {/* <AiToolsSection
             preview={aiPreview}
             calculator="Enter account size, risk %, and stop distance to get a suggested lot size that keeps risk consistent."
             roadmap={aiRoadmap}
           />
-          {/* <FitSection fit={fit} notFit={notFit} /> */}
-          <FAQSection faqs={faq} />
-          <FinalCTASection />
-          <RiskFooter />
+          <FAQSection faqs={faq} /> */}
         </main>
       </div>
       <style jsx global>{`

@@ -84,28 +84,9 @@ export function HeroSection({ stats }) {
               rule-based evaluations. Combine capital, risk-aware AI tools, and
               robust infrastructure so you can focus on executing your strategy.
             </p>
-            <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-              <Link
-                className="inline-flex items-center justify-center rounded-lg bg-[#34D399] px-6 py-3 text-base font-semibold text-[#0A0E19] transition hover:bg-[#3FE0A7]"
-                href="#funding"
-              >
-                View funding programs
-              </Link>
-              <Link
-                className="inline-flex items-center justify-center rounded-lg border border-[#34D399] px-6 py-3 text-base font-semibold text-[#34D399] transition hover:bg-[#34D3991A]"
-                href="#ai-tools"
-              >
-                Explore AI tools
-              </Link>
-            </div>
-            <p className="mt-5 text-sm text-[#88909C]">
-              For intermediate to advanced forex and indices traders. Trading
-              leveraged products involves significant risk and is not suitable
-              for everyone.
-            </p>
-            
-            {/* Email Subscribe Form */}
-            <div className="subscribe-bounce mt-8 rounded-2xl border border-[#34D399]/20 bg-gradient-to-br from-[#0F1523]/80 to-[#0A0E19]/80 p-6 backdrop-blur-sm shadow-[0_0_30px_rgba(52,211,153,0.2)]">
+
+                        {/* Email Subscribe Form */}
+                        <div className="subscribe-bounce mt-8 rounded-2xl border border-[#34D399]/20 bg-gradient-to-br from-[#0F1523]/80 to-[#0A0E19]/80 p-6 backdrop-blur-sm shadow-[0_0_30px_rgba(52,211,153,0.2)]">
               <h3 className="mb-3 text-lg font-semibold text-white">
                 Stay updated with trading insights
               </h3>
@@ -130,6 +111,27 @@ export function HeroSection({ stats }) {
                 </button>
               </form>
             </div>
+
+            <div className="mt-8 flex flex-col gap-4 sm:flex-row">
+              <Link
+                className="inline-flex items-center justify-center rounded-lg bg-[#34D399] px-6 py-3 text-base font-semibold text-[#0A0E19] transition hover:bg-[#3FE0A7]"
+                href="#funding"
+              >
+                View funding programs
+              </Link>
+              <Link
+                className="inline-flex items-center justify-center rounded-lg border border-[#34D399] px-6 py-3 text-base font-semibold text-[#34D399] transition hover:bg-[#34D3991A]"
+                href="#ai-tools"
+              >
+                Get Started
+              </Link>
+            </div>
+            <p className="mt-5 text-sm text-[#88909C]">
+              For intermediate to advanced forex and indices traders. Trading
+              leveraged products involves significant risk and is not suitable
+              for everyone.
+            </p>
+            
           </div>
           <div className="mt-10 grid flex-1 gap-6 rounded-2xl border border-[#1C2335]/70 bg-[#0F1523]/80 p-8 shadow-[0_35px_120px_rgba(52,211,153,0.18)] ring-1 ring-[#34D399]/10 backdrop-blur-xl sm:grid-cols-2">
             {stats.map((item) => (

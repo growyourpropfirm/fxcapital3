@@ -41,7 +41,7 @@ export function Header() {
           ))}
         </nav> */}
  
-        <div className="hidden gap-3 md:flex">
+        {/* <div className="hidden gap-3 md:flex">
           <Link
             href="/login"
             className="inline-flex items-center justify-center rounded-lg border border-[#34D399] px-5 py-2.5 text-sm font-semibold text-[#34D399] transition hover:bg-[#34D3991A]"
@@ -54,9 +54,9 @@ export function Header() {
           >
             Sign Up
           </Link>
-        </div>
+        </div> */}
 
-        <div className="flex gap-2 md:hidden">
+        {/* <div className="flex gap-2 md:hidden">
           <Link
             href="/login"
             className="inline-flex items-center justify-center rounded-lg border border-[#34D399] px-4 py-2 text-xs font-semibold text-[#34D399] transition hover:bg-[#34D3991A]"
@@ -69,7 +69,7 @@ export function Header() {
           >
             Sign Up
           </Link>
-        </div>
+        </div> */}
       </div>
     </header>
   );
