@@ -28,14 +28,14 @@ export function FinalCTASection() {
 
       <div className="relative z-10">
         <p className="text-sm uppercase tracking-[0.3em] text-[#34D399]">
-          Final call
+        Ready to Show Your Skills?
         </p>
         <h2 className="text-3xl font-semibold text-white">
-          Ready to Show Your Skills?
+        Start your evaluation challenge today.
         </h2>
-        <p className="mt-4 text-lg text-[#A0A8B0]">
+        {/* <p className="mt-4 text-lg text-[#A0A8B0]">
           Limited FXCapital trial accounts are available this week.
-        </p>
+        </p> */}
         <form
           onSubmit={handleSubmit}
           className="mt-8 flex flex-col gap-3 sm:flex-row sm:justify-center"
@@ -53,7 +53,7 @@ export function FinalCTASection() {
             disabled={isSubmitting}
             className="inline-flex items-center justify-center rounded-lg bg-[#34D399] px-6 py-3 text-sm font-semibold text-[#0A0E19] transition hover:bg-[#3FE0A7] disabled:cursor-not-allowed disabled:opacity-60"
           >
-            {isSubmitting ? "Submitting..." : "START MY FREE TRIAL"}
+            {isSubmitting ? "Submitting..." : "START MY CHALLENGE (Trade Now)"}
           </button>
         </form>
         <p className="mt-4 text-sm text-[#A0A8B0]">
@@ -61,9 +61,9 @@ export function FinalCTASection() {
           potential—without risking their own capital on day one.
         </p>
         <p className="mt-5 text-xs text-[#88909C]">
-          Take time to read the rules, legal terms, and risk disclosures
-          carefully. Apply only if you understand how the program works and
-          accept the risks involved.
+       <i>
+       Used by traders worldwide who seek a structured path to funding potential.
+       </i>
         </p>
       </div>
     </section>

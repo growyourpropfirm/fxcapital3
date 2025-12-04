@@ -1,22 +1,19 @@
 const journeySteps = [
   {
-    label: "Step 1",
-    title: "Start your trial today.",
-    body:
-      "Sign up with your email and begin trading your simulated trial account.",
+    "label": "Step 1",
+    "title": "Choose your challenge.",
+    "body": "Select a 1-Step or 2-Step Evaluation and begin trading your simulated account under the evaluation rules."
   },
   {
-    label: "Step 2",
-    title: "Prove your trading discipline.",
-    body:
-      "Trade your edge while respecting FXCapital’s risk rules and evaluation conditions.",
+    "label": "Step 2",
+    "title": "Trade with discipline.",
+    "body": "Execute your strategy while respecting FXCapital3’s profit targets and drawdown limits."
   },
   {
-    label: "Step 3",
-    title: "Unlock access to a funded challenge.",
-    body:
-      "Meet the criteria, then move into a 1-Step or 2-Step challenge with larger simulated capital and an 80% profit split.",
-  },
+    "label": "Step 3",
+    "title": "Get funded and earn a split.",
+    "body": "Upon passing, qualify for a simulated funded account and earn up to an 80% profit split."
+  }
 ];
 
 export function NextStepsSection() {
@@ -27,7 +24,7 @@ export function NextStepsSection() {
           What happens next
         </p>
         <h2 className="text-3xl font-semibold text-white">
-          Your Journey to Funding Starts Here
+          Your Path to Funding
         </h2>
       </div>
       <div className="grid gap-6 md:grid-cols-3">

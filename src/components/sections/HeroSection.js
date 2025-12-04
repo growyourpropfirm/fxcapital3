@@ -80,18 +80,16 @@ export function HeroSection({ stats }) {
               AI-guided forex funding for disciplined traders
             </h1>
             <p className="mt-6 text-lg text-[#A0A8B0]">
-              Access up to $400,000 in simulated funding through clear,
-              rule-based evaluations. Combine capital, risk-aware AI tools, and
-              robust infrastructure so you can focus on executing your strategy.
+            Access up to $1,200,000 in simulated funding through clear, rule-based evaluations. Combine capital, risk-aware AI tools, and robust infrastructure so you can focus on executing your strategy.
             </p>
 
             {/* Email Subscribe Form */}
             <div className="subscribe-bounce mt-8 rounded-2xl border border-[#34D399]/20 bg-gradient-to-br from-[#0F1523]/80 to-[#0A0E19]/80 p-6 backdrop-blur-sm shadow-[0_0_30px_rgba(52,211,153,0.2)]">
               <h3 className="mb-3 text-lg font-semibold text-white">
-                Stay updated with trading insights
+              Start in Minutes
               </h3>
               <p className="mb-4 text-sm text-[#A0A8B0]">
-                Get the latest updates, market analysis, and exclusive offers delivered to your inbox.
+              Register with your email to get instant access and begin your 1-Step or 2-Step Evaluation.
               </p>
               <form onSubmit={handleSubscribe} className="flex flex-col gap-3 sm:flex-row">
                 <input
@@ -107,14 +105,14 @@ export function HeroSection({ stats }) {
                   disabled={isSubmitting}
                   className="inline-flex items-center justify-center rounded-lg bg-[#34D399] px-6 py-3 text-sm font-semibold text-[#0A0E19] transition hover:bg-[#3FE0A7] disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  {isSubmitting ? "Subscribing..." : "Get Started"}
+                  {isSubmitting ? "Subscribing..." : "REGISTER & TRADE"}
                 </button>
               </form>
             </div>
             <p className="mt-5 text-sm text-[#88909C]">
-              For intermediate to advanced forex and indices traders. Trading
-              leveraged products involves significant risk and is not suitable
-              for everyone.
+                <i>
+                For intermediate to advanced forex and indices traders. Trading leveraged products involves significant risk and is not suitable for everyone.
+                </i>
             </p>
 
           </div>

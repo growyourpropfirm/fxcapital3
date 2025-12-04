@@ -28,57 +28,46 @@ const inter = Inter({
 });
 
 const stats = [
-  { label: "Max simulated funding", value: "$400K" },
-  { label: "Profit split", value: "80%" },
+  { label: "Max simulated funding", value: "$1.2M" },
+  { label: "Profit split", value: "Up to 80%" },
   { label: "Evaluation phases", value: "1-step & 2-step" },
   { label: "Drawdown limits", value: "4-8%" },
 ];
 
 const howItWorks = [
   {
-    title: "Register for Free Access",
-    body:
-      "Sign up with your email to receive your trial account credentials and evaluation rules instantly.",
+    "title": "Choose Your Challenge",
+    "body": "Select and register for a 1-Step or 2-Step Evaluation to receive your account credentials and the full rule set."
   },
   {
-    title: "Trade Under Simulated Conditions",
-    body:
-      "Use simulated capital with live market data to trade your own strategy while following FXCapital’s risk limits and guidelines.",
+    "title": "Trade Under Evaluation Rules",
+    "body": "Use simulated capital with live market data to trade your strategy while meeting FXCapital3’s profit targets and drawdown limits (6–8% max, 4–5% daily)."
   },
   {
-    title: "Qualify for a Funding Challenge",
-    body:
-      "Show discipline and consistency in the trial to earn an invite to a 1-Step or 2-Step funding challenge with larger simulated capital.",
-  },
+    "title": "Qualify for a Funded Account",
+    "body": "Pass your selected evaluation to qualify for a simulated funded account and earn up to an 80% profit split."
+  }
 ];
 
 const benefits = [
   {
-    title: "No deposit into a trading account",
-    body:
-      "Trade simulated funds only—your personal trading capital stays untouched.",
+    "title": "Clear, structured evaluation",
+    "body": "See how your strategy performs under defined profit targets and drawdown rules."
   },
   {
-    title: "Fast, structured feedback",
-    body:
-      "See how your strategy performs under clear drawdown rules and evaluation targets.",
+    "title": "Transparent rules",
+    "body": "All conditions are defined before you start – no hidden tricks, no surprise restrictions."
   },
   {
-    title: "Transparent evaluation rules",
-    body:
-      "All conditions are defined before you start – no hidden tricks, no surprise restrictions.",
+    "title": "AI-powered tools",
+    "body": "Access tools like a position size calculator to help manage risk and exposure."
   },
   {
-    title: "No hidden conditions",
-    body:
-      "Clean, rules-based framework. What you see in the trial is what you can expect in the full evaluation",
-  },
-  // {
-  //   title: "Transparent, realistic messaging",
-  //   body:
-  //     "We don’t promise easy profits or guarantees—we provide structure, capital access, and tools. Results depend on you and the market.",
-  // },
+    "title": "Path to funding",
+    "body": "Pass the evaluation to qualify for a simulated funded account with profit-split potential."
+  }
 ];
+
 
 const faq = [
   {
@@ -175,9 +164,9 @@ const programs = [
 // ];
 
 const notFit = [
-  "You’ve been trading demo or small real accounts and want to see if your approach is ready for a funding evaluation.",
-  "You want to experience a professional, rule-based evaluation process before paying for a full challenge.",
-  "You prefer to start in a risk-controlled, simulated environment while you build trust in both your strategy and the FXCapital framework.",
+  "You’ve been trading demo or live accounts and want to see if your approach can meet professional evaluation criteria.",
+  "You want to experience a clear, rule-based evaluation process with defined targets and limits.",
+  "You prefer a structured, simulated environment to demonstrate consistent strategy performance.",
 ];
 
 const aiPreview = [

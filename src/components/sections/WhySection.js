@@ -3,20 +3,13 @@ export function WhySection({ benefits }) {
     <section className="space-y-10" id="why" data-aos="fade-up">
       <div className="flex flex-col gap-4">
         <p className="text-sm uppercase tracking-[0.3em] text-[#34D399]">
-          Designed for serious traders
+        Designed for Serious Traders
         </p>
         <h2 className="text-3xl font-semibold text-white">
-          Designed for Serious Traders, Not Risk-Takers
+        Designed for Serious Traders
         </h2>
         <p className="text-lg text-[#A0A8B0]">
-          The FXCapital trial lets you experience our funding framework, risk
-          limits, and tools without putting your own capital at risk. You trade
-          under the same style of rules as our paid evaluations—just in a
-          smaller, simulated environment first.
-        </p>
-        <p className="text-lg text-[#A0A8B0]">
-          When you later choose to start a full challenge, you already
-          understand the rules, pacing, and expectations.
+        The FXCapital3 evaluation provides a professional framework with clear risk limits and rules. You trade under the same conditions as our funded accounts—in a simulated environment first. When you start your challenge, you’ll understand the rules, pacing, and expectations.
         </p>
       </div>
       <div className="grid gap-6 md:grid-cols-2">

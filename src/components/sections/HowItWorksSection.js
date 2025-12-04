@@ -3,10 +3,10 @@ export function HowItWorksSection({ steps }) {
     <section className="space-y-10" id="how-it-works" data-aos="fade-up">
       <div className="flex flex-col gap-4">
         <p className="text-sm uppercase tracking-[0.3em] text-[#34D399]">
-          How the trial evaluation works
+        How the Evaluation Challenge Works
         </p>
         <h2 className="text-3xl font-semibold text-white">
-          How the Trial Evaluation Works
+        How the Evaluation Challenge Works
         </h2>
         {/* <p className="text-lg text-[#A0A8B0]">
           A simple preview of FXCapital&apos;s funding framework—no deposit, no
@@ -33,8 +33,7 @@ export function HowItWorksSection({ steps }) {
         ))}
       </div>
       <p className="text-sm text-[#88909C]">
-        All trial and evaluation stages use simulated funds only and do not
-        involve real-money trading.
+    <i>All evaluation stages use simulated funds only and do not involve real-money trading of your own capital.</i>
       </p>
     </section>
   );
