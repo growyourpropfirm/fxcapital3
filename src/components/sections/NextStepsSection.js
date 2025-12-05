@@ -25,7 +25,7 @@ export function NextStepsSection() {
     <section className="relative overflow-hidden space-y-8 rounded-3xl px-6 py-12" id="journey" data-aos="fade-up">
       <AnimatedBackground variant="default" />
       <div className="relative z-10">
-      <div className="flex flex-col gap-3 text-center">
+      <div className="flex flex-col gap-3 text-center mb-4">
         <p className="text-sm uppercase tracking-[0.3em] text-[#34D399]">
           What happens next
         </p>
