@@ -1,12 +1,17 @@
+"use client";
+
 import Image from "next/image";
-import Customers from "../../../public/customers.webp"
+import Customers from "../../../public/customers.webp";
+import { AnimatedBackground } from "@/components/AnimatedBackground";
 
 export function TrustedSection() {
   return (
     <section
-      className="space-y-6 rounded-3xl border border-[#1C2335] bg-gradient-to-br from-[#0F1523] to-[#0A0E19] p-8 text-center shadow-[0_25px_80px_rgba(10,14,25,0.55)]"
+      className="relative overflow-hidden space-y-6 rounded-3xl border border-[#1C2335] bg-gradient-to-br from-[#0F1523] to-[#0A0E19] p-8 text-center shadow-[0_25px_80px_rgba(10,14,25,0.55)]"
       data-aos="fade-up"
     >
+      <AnimatedBackground variant="default" />
+      <div className="relative z-10">
       {/* <p className="text-sm uppercase tracking-[0.3em] text-[#34D399]">
       Trusted By Traders All Around The World
       </p> */}
@@ -33,8 +38,9 @@ export function TrustedSection() {
         data-aos-delay="400"
       />
       <p className="text-sm text-[#A0A8B0]">
-        <i>Traders use FXCapital3’s structured evaluations to test their strategies under real-time market conditions.</i>
+        <i>Traders use FXCapital3's structured evaluations to test their strategies under real-time market conditions.</i>
       </p>
+      </div>
     </section>
   );
 }

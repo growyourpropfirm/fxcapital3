@@ -3,6 +3,8 @@
 import Link from "next/link";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import { motion } from "framer-motion";
+import { AnimatedBackground } from "@/components/AnimatedBackground";
 
 export function HeroSection({ stats }) {
   const [email, setEmail] = useState("");
@@ -23,12 +25,22 @@ export function HeroSection({ stats }) {
       className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#0F1523] via-[#0A0E19] to-[#0A0E19] px-8 py-16 shadow-2xl sm:px-12"
       data-aos="fade-up"
     >
-      <div className="pointer-events-none absolute inset-0">
-        <svg
-          className="hero-wave hero-wave-1"
+      <AnimatedBackground variant="vibrant" />
+      <div className="pointer-events-none absolute inset-0 overflow-hidden">
+        {/* Animated waves with Framer Motion */}
+        <motion.svg
+          className="absolute w-[200%] h-40 left-[-50%] top-[10%]"
           viewBox="0 0 1200 200"
           preserveAspectRatio="none"
           aria-hidden="true"
+          animate={{
+            x: ["0%", "-25%"],
+          }}
+          transition={{
+            duration: 18,
+            repeat: Infinity,
+            ease: "linear",
+          }}
         >
           <path
             d="M0 120 Q 150 60 300 120 T 600 120 T 900 120 T 1200 120"
@@ -37,12 +49,20 @@ export function HeroSection({ stats }) {
             strokeOpacity="0.45"
             fill="none"
           />
-        </svg>
-        <svg
-          className="hero-wave hero-wave-2"
+        </motion.svg>
+        <motion.svg
+          className="absolute w-[200%] h-40 left-[-50%] top-[45%]"
           viewBox="0 0 1200 200"
           preserveAspectRatio="none"
           aria-hidden="true"
+          animate={{
+            x: ["0%", "-25%"],
+          }}
+          transition={{
+            duration: 22,
+            repeat: Infinity,
+            ease: "linear",
+          }}
         >
           <path
             d="M0 140 Q 200 90 400 140 T 800 140 T 1200 140"
@@ -51,12 +71,20 @@ export function HeroSection({ stats }) {
             strokeOpacity="0.3"
             fill="none"
           />
-        </svg>
-        <svg
-          className="hero-wave hero-wave-3"
+        </motion.svg>
+        <motion.svg
+          className="absolute w-[200%] h-40 left-[-50%] bottom-[5%]"
           viewBox="0 0 1200 200"
           preserveAspectRatio="none"
           aria-hidden="true"
+          animate={{
+            x: ["0%", "-25%"],
+          }}
+          transition={{
+            duration: 28,
+            repeat: Infinity,
+            ease: "linear",
+          }}
         >
           <path
             d="M0 160 Q 180 110 360 160 T 720 160 T 1080 160"
@@ -65,7 +93,7 @@ export function HeroSection({ stats }) {
             strokeOpacity="0.2"
             fill="none"
           />
-        </svg>
+        </motion.svg>
       </div>
       <div className="relative z-10">
         <div className="mb-6 inline-flex items-center gap-2 rounded-full bg-[#059669] px-4 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-white sm:text-sm">
@@ -84,7 +112,17 @@ export function HeroSection({ stats }) {
             </p>
 
             {/* Email Subscribe Form */}
-            <div className="subscribe-bounce mt-8 rounded-2xl border border-[#34D399]/20 bg-gradient-to-br from-[#0F1523]/80 to-[#0A0E19]/80 p-6 backdrop-blur-sm shadow-[0_0_30px_rgba(52,211,153,0.2)]">
+            <motion.div
+              className="mt-8 rounded-2xl border border-[#34D399]/20 bg-gradient-to-br from-[#0F1523]/80 to-[#0A0E19]/80 p-6 backdrop-blur-sm shadow-[0_0_30px_rgba(52,211,153,0.2)]"
+              animate={{
+                y: [0, -8, 0],
+              }}
+              transition={{
+                duration: 3,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+            >
               <h3 className="mb-3 text-lg font-semibold text-white">
               Start in Minutes
               </h3>
@@ -108,7 +146,7 @@ export function HeroSection({ stats }) {
                   {isSubmitting ? "Subscribing..." : "REGISTER & TRADE"}
                 </button>
               </form>
-            </div>
+            </motion.div>
             <p className="mt-5 text-sm text-[#88909C]">
                 <i>
                 For intermediate to advanced forex and indices traders. Trading leveraged products involves significant risk and is not suitable for everyone.
@@ -134,45 +172,6 @@ export function HeroSection({ stats }) {
           </div>
         </div>
       </div>
-      <style jsx>{`
-        .hero-wave {
-          position: absolute;
-          width: 200%;
-          height: 160px;
-          left: -50%;
-          animation: waveSlide 18s linear infinite;
-        }
-        .hero-wave-1 {
-          top: 10%;
-        }
-        .hero-wave-2 {
-          top: 45%;
-          animation-duration: 22s;
-        }
-        .hero-wave-3 {
-          bottom: 5%;
-          animation-duration: 28s;
-        }
-        @keyframes waveSlide {
-          0% {
-            transform: translateX(0);
-          }
-          100% {
-            transform: translateX(-25%);
-          }
-        }
-        .subscribe-bounce {
-          animation: gentleBounce 3s ease-in-out infinite;
-        }
-        @keyframes gentleBounce {
-          0%, 100% {
-            transform: translateY(0);
-          }
-          50% {
-            transform: translateY(-8px);
-          }
-        }
-      `}</style>
     </section>
   );
 }

@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import { AnimatedBackground } from "@/components/AnimatedBackground";
 
 export function FinalCTASection() {
   const [email, setEmail] = useState("");
@@ -21,6 +22,7 @@ export function FinalCTASection() {
       className="relative overflow-hidden rounded-3xl border border-[#34D399]/20 bg-gradient-to-br from-[#0F1523] via-[#0A0E19] to-[#0A0E19] px-8 py-16 text-center shadow-[0_40px_120px_rgba(52,211,153,0.15)]"
       data-aos="fade-up"
     >
+      <AnimatedBackground variant="vibrant" />
       {/* Background glow effect */}
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute left-1/2 top-1/2 h-96 w-96 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#34D399]/10 blur-[120px]" />

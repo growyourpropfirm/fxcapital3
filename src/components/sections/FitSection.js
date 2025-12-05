@@ -1,6 +1,12 @@
+"use client";
+
+import { AnimatedBackground } from "@/components/AnimatedBackground";
+
 export function FitSection({ bullets }) {
   return (
-    <section className="space-y-10" id="fit" data-aos="fade-up">
+    <section className="relative overflow-hidden space-y-10 rounded-3xl px-6 py-12" id="fit" data-aos="fade-up">
+      <AnimatedBackground variant="default" />
+      <div className="relative z-10">
       <div className="flex flex-col gap-4">
         <p className="text-sm uppercase tracking-[0.3em] text-[#34D399]">
         Perfect for Traders Who Want to Validate Their Strategy
@@ -15,6 +21,7 @@ export function FitSection({ bullets }) {
             <li key={item}>{item}</li>
           ))}
         </ul>
+      </div>
       </div>
     </section>
   );

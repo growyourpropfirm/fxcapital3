@@ -1,15 +1,28 @@
+"use client";
+
+import { AnimatedBackground } from "@/components/AnimatedBackground";
+
 export function WhySection({ benefits }) {
   return (
-    <section className="space-y-10" id="why" data-aos="fade-up">
+    <section className="relative overflow-hidden space-y-10 rounded-3xl px-6 py-12" id="why" data-aos="fade-up">
+      <AnimatedBackground variant="default" />
+      <div className="relative z-10">
       <div className="flex flex-col gap-4">
         <p className="text-sm uppercase tracking-[0.3em] text-[#34D399]">
-        Designed for Serious Traders
+          Designed for serious traders
         </p>
         <h2 className="text-3xl font-semibold text-white">
-        Designed for Serious Traders
+          Designed for Serious Traders, Not Risk-Takers
         </h2>
         <p className="text-lg text-[#A0A8B0]">
-        The FXCapital3 evaluation provides a professional framework with clear risk limits and rules. You trade under the same conditions as our funded accounts—in a simulated environment first. When you start your challenge, you’ll understand the rules, pacing, and expectations.
+          The FXCapital trial lets you experience our funding framework, risk
+          limits, and tools without putting your own capital at risk. You trade
+          under the same style of rules as our paid evaluations—just in a
+          smaller, simulated environment first.
+        </p>
+        <p className="text-lg text-[#A0A8B0]">
+          When you later choose to start a full challenge, you already
+          understand the rules, pacing, and expectations.
         </p>
       </div>
       <div className="grid gap-6 md:grid-cols-2">
@@ -37,6 +50,7 @@ export function WhySection({ benefits }) {
             </div>
           </div>
         ))}
+      </div>
       </div>
     </section>
   );

@@ -1,9 +1,15 @@
+"use client";
+
+import { AnimatedBackground } from "@/components/AnimatedBackground";
+
 export function MistakeSection() {
   return (
     <section
-      className="space-y-6 rounded-3xl border border-[#1C2335] bg-[#0F1523]/80 p-8 shadow-[0_25px_80px_rgba(10,14,25,0.55)]"
+      className="relative overflow-hidden space-y-6 rounded-3xl border border-[#1C2335] bg-[#0F1523]/80 p-8 shadow-[0_25px_80px_rgba(10,14,25,0.55)]"
       data-aos="fade-up"
     >
+      <AnimatedBackground variant="default" />
+      <div className="relative z-10">
       <div className="flex flex-col gap-3">
         <p className="text-sm uppercase tracking-[0.3em] text-[#34D399]">
           Made a Mistake? Don’t Start Over.
@@ -33,7 +39,7 @@ export function MistakeSection() {
           </i>
         </p>
       </div>
-
+      </div>
     </section>
   );
 }

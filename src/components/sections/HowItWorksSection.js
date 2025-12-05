@@ -1,6 +1,12 @@
+"use client";
+
+import { AnimatedBackground } from "@/components/AnimatedBackground";
+
 export function HowItWorksSection({ steps }) {
   return (
-    <section className="space-y-10" id="how-it-works" data-aos="fade-up">
+    <section className="relative overflow-hidden space-y-10 rounded-3xl px-6 py-12" id="how-it-works" data-aos="fade-up">
+      <AnimatedBackground variant="default" />
+      <div className="relative z-10">
       <div className="flex flex-col gap-4">
         <p className="text-sm uppercase tracking-[0.3em] text-[#34D399]">
         How the Evaluation Challenge Works
@@ -35,6 +41,7 @@ export function HowItWorksSection({ steps }) {
       <p className="text-sm text-[#88909C]">
     <i>All evaluation stages use simulated funds only and do not involve real-money trading of your own capital.</i>
       </p>
+      </div>
     </section>
   );
 }
