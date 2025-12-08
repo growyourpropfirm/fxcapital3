@@ -12,9 +12,40 @@ export function FinalCTASection() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!email || isSubmitting) return;
+    
     setIsSubmitting(true);
-    await new Promise((resolve) => setTimeout(resolve, 500));
-    router.push(`/subscribe?email=${encodeURIComponent(email)}`);
+    
+    try {
+      // Call Brevo API
+      const response = await fetch("/api/subscribe", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email }),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        // Redirect to appropriate page based on subscription status
+        if (data.alreadySubscribed) {
+          router.push(`/subscribe?email=${encodeURIComponent(email)}&already=true`);
+        } else {
+          router.push(`/subscribe?email=${encodeURIComponent(email)}`);
+        }
+      } else {
+        // Handle error - still redirect but could show error message
+        console.error("Subscription error:", data.error);
+        router.push(`/subscribe?email=${encodeURIComponent(email)}`);
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      // Still redirect to subscribe page even on error
+      router.push(`/subscribe?email=${encodeURIComponent(email)}`);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
