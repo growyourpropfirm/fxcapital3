@@ -55,7 +55,7 @@ export function FinalCTASection() {
             disabled={isSubmitting}
             className="inline-flex items-center justify-center rounded-lg bg-[#34D399] px-6 py-3 text-sm font-semibold text-[#0A0E19] transition hover:bg-[#3FE0A7] disabled:cursor-not-allowed disabled:opacity-60"
           >
-            {isSubmitting ? "Submitting..." : "START MY CHALLENGE (Trade Now)"}
+            {isSubmitting ? "Submitting..." : "TRADE NOW"}
           </button>
         </form>
         <p className="mt-4 text-sm text-[#A0A8B0]">
