@@ -86,80 +86,83 @@ export default function SubscribeInner() {
               </div>
 
               <div className="relative z-10 text-center">
-                {/* Success Icon */}
+                {/* Success Icon with Gold Gradient */}
                 <div
-                  className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-full bg-[#34D399]/20 ring-4 ring-[#34D399]/30"
+                  className="success-icon-wrapper mx-auto mb-6"
                   data-aos="zoom-in"
                   data-aos-delay="100"
                 >
-                  <svg
-                    className="h-10 w-10 text-[#34D399]"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M5 13l4 4L19 7"
-                    />
-                  </svg>
+                  <div className="success-icon flex justify-center">
+                    <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="40" cy="40" r="40" fill="url(#goldGradient)" />
+                      <path d="M25 40L35 50L55 30" stroke="#000" strokeWidth="5" strokeLinecap="round" strokeLinejoin="round" />
+                      <defs>
+                        <linearGradient id="goldGradient" x1="0" y1="0" x2="80" y2="80">
+                          <stop offset="0%" stopColor="#34d399" />
+                          <stop offset="100%" stopColor="#F4E6AB" />
+                        </linearGradient>
+                      </defs>
+                    </svg>
+                  </div>
                 </div>
 
-                {/* Success Message */}
+                {/* Title */}
                 <h1
-                  className="mb-4 text-4xl font-bold text-white sm:text-5xl"
+                  className="subscribe-title mb-4 text-4xl font-bold text-white sm:text-5xl"
                   data-aos="fade-up"
                   data-aos-delay="200"
                 >
-                  Congratulations!
+                  You're In!<br />Check your inbox!
                 </h1>
-                <p
-                  className="mb-2 text-xl font-semibold text-[#34D399]"
-                  data-aos="fade-up"
-                  data-aos-delay="300"
-                >
-                  You've successfully subscribed
-                </p>
+
+                {/* Subtitle */}
                 {email && (
                   <p
-                    className="mb-8 text-lg text-[#A0A8B0]"
+                    className="subscribe-subtitle mb-8 text-lg text-[#A0A8B0]"
                     data-aos="fade-up"
-                    data-aos-delay="400"
+                    data-aos-delay="300"
                   >
-                    We've sent a confirmation to <span className="font-medium text-white">{email}</span>
+                    We've sent your early access details to<br />
+                    <strong className="email-highlight font-semibold text-[#34D399]">{email}</strong>
                   </p>
                 )}
 
-                {/* Description */}
+                {/* What's Next Section */}
                 <div
-                  className="mx-auto mb-8 max-w-md rounded-2xl border border-[#1C2335] bg-[#0F1523]/50 p-6 text-left"
+                  className="subscribe-message mx-auto mb-8 max-w-md"
                   data-aos="fade-up"
-                  data-aos-delay="500"
+                  data-aos-delay="400"
                 >
-                  <p className="text-[#A0A8B0]">
-                    You'll now receive the latest updates, trading insights, market analysis, and exclusive offers from FXCapital3.
-                  </p>
+                  <div className="message-box rounded-2xl border border-[#1C2335] bg-[#0F1523]/50 p-6 text-left">
+                    <h3 className="mb-4 text-xl font-semibold text-white">What's Next?</h3>
+                    <ul className="next-steps-list space-y-3 text-[#A0A8B0]">
+                      <li className="flex items-start gap-3">
+                        <span className="list-icon text-2xl">📧</span>
+                        <span>Check your email for the starter guide and pricing tiers</span>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <span className="list-icon text-2xl">🎯</span>
+                        <span>Review the evaluation rules and account options</span>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <span className="list-icon text-2xl">🚀</span>
+                        <span>Start your journey to a funded account</span>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
 
                 {/* CTA Buttons */}
                 <div
                   className="flex flex-col gap-4 sm:flex-row sm:justify-center"
                   data-aos="fade-up"
-                  data-aos-delay="600"
+                  data-aos-delay="500"
                 >
                   <Link
                     href="/"
                     className="inline-flex items-center justify-center rounded-lg bg-[#34D399] px-6 py-3 text-base font-semibold text-[#0A0E19] transition hover:bg-[#3FE0A7]"
                   >
                     Back to Home
-                  </Link>
-                  <Link
-                    href="/#funding"
-                    className="inline-flex items-center justify-center rounded-lg border border-[#34D399] px-6 py-3 text-base font-semibold text-[#34D399] transition hover:bg-[#34D3991A]"
-                  >
-                    View Funding Programs
                   </Link>
                 </div>
               </div>

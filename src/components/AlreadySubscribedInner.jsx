@@ -157,12 +157,6 @@ export default function AlreadySubscribedInner() {
                   >
                     Back to Home
                   </Link>
-                  <Link
-                    href="/#funding"
-                    className="inline-flex items-center justify-center rounded-lg border border-[#34D399] px-6 py-3 text-base font-semibold text-[#34D399] transition hover:bg-[#34D3991A]"
-                  >
-                    View Funding Programs
-                  </Link>
                 </div>
               </div>
             </div>
